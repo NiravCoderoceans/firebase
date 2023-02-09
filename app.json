@@ -2,6 +2,19 @@
   "expo": {
     "name": "finalFirebase",
     "slug": "finalFirebase",
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "1353481078838220",
+          "clientToken": "800f5b6b89bc8b7fcbb2ebc3da6c69fb",
+          "displayName": "firebase"
+        }
+      ]
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,20 +27,25 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.nirav5502.finalFirebase"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1f74c6ec-1273-4259-aa88-c892c35ffcf5"
+      }
     }
   }
 }
